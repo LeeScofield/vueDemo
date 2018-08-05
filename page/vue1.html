@@ -12,13 +12,25 @@
 	<body>
 			
 			<div id="vue-el">
-				<h1>{{ greet("lee") }}</h1>
+				<h1>{{ greet("leeScofield") }}</h1>
 				<h1>{{ name }}</h1>
 				<a v-bind:href="webSite">{{siteName}}</a>
 				<input type="text"  v-bind:value="age" />
 				<div v-html="webSiteTag"></div>
 			</div>
 			
+			<div id="vue-el2">
+				
+				<h1>Event</h1>
+				<input type="button" v-on:click="age++" value="加1岁">
+				<input type="button" @click="subtract(1)" value="减1岁">
+				<input type="button" v-on:dblclick="add(10)" value="加10岁">
+				<input type="button" @dblclick="subtract(10)" value="减10岁">
+				<br>
+				<span>my age is {{age}}</span>
+				<!-- 可以不用带方法括号，VUE放在方法里的参数，自动识别为方法 -->
+				<div class="updateXY" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+			</div>
 			
 			<script type="text/javascript" src="../javascript/index.js"></script>
 	</body>

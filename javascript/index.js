@@ -1,4 +1,5 @@
 
+//数据绑定
 new Vue({
 	el:"#vue-el",  //document元素
 	data:{
@@ -12,6 +13,29 @@ new Vue({
 	methods:{
 		greet:function(name){
 			return "欢迎："+name+" and " + this.name;
+		}
+	}
+});
+
+//事件
+new Vue({
+	el:"#vue-el2",
+	data:{
+		age:30,
+		x:0,
+		y:0
+	},
+	methods:{
+		add:function(v){
+			this.age = this.age + v;
+		},
+		subtract:function(v){
+			this.age = this.age - v;
+		},
+		updateXY:function(event){
+			// console.log(event);
+			this.x = event.offsetX;
+			this.y = event.offsetY;
 		}
 	}
 });

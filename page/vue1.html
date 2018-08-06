@@ -22,14 +22,23 @@
 			<div id="vue-el2">
 				
 				<h1>Event</h1>
-				<input type="button" v-on:click="age++" value="加1岁">
+				<input type="button" v-on:click.once="age++" value="加1岁">
 				<input type="button" @click="subtract(1)" value="减1岁">
 				<input type="button" v-on:dblclick="add(10)" value="加10岁">
 				<input type="button" @dblclick="subtract(10)" value="减10岁">
 				<br>
 				<span>my age is {{age}}</span>
 				<!-- 可以不用带方法括号，VUE放在方法里的参数，自动识别为方法 -->
-				<div class="updateXY" v-on:mousemove="updateXY">{{x}},{{y}}</div>
+				<div class="updateXY" v-on:mousemove="updateXY">
+					{{x}},{{y}} - <span v-on:mousemove.stop="">stop moving</span>
+				</div>
+				<a v-bind:href="baidu" v-on:click.prevent="alert()">baidu</a>
+			</div>
+			
+			<div id="vue-el3">
+				<h1>Key Event {{v}}</h1>
+				<label>alt+enter</label>
+				<input type="text" v-on:keyup.alt.enter="enterFun()" >
 			</div>
 			
 			<script type="text/javascript" src="../javascript/index.js"></script>

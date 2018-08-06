@@ -23,7 +23,8 @@ new Vue({
 	data:{
 		age:30,
 		x:0,
-		y:0
+		y:0,
+		baidu:"http://www.baidu.com"
 	},
 	methods:{
 		add:function(v){
@@ -36,6 +37,23 @@ new Vue({
 			// console.log(event);
 			this.x = event.offsetX;
 			this.y = event.offsetY;
+		},
+		alert:function(){
+			alert("test");
 		}
 	}
+});
+
+//键盘事件
+new Vue({
+	el:"#vue-el3",
+	data:{
+		v:"hello"
+	},
+	methods:{
+		enterFun:function(){
+			console.log("enter key");
+		}
+	}
+	
 });

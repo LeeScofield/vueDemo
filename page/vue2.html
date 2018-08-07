@@ -19,6 +19,32 @@
 				{{age}}
 			</div>
 			
+			<div id="vue-el1">
+				<h1>计算属性</h1>
+				<button type="button" v-on:click="a++">a加1</button>
+				<button type="button" v-on:click="b++">b加1</button>
+				<button type="button" @click="addTest">测试方法</button>
+				<button type="button" @click="addTest2">测试方法</button>
+				<br>
+				Test - {{c}}
+				<br>
+				Test2 - {{d}}
+				
+				<hr>
+				<br>
+				a-{{a}}
+				<br>
+				b-{{b}}
+				<br>
+				age + a = {{addA()}}
+				<br>
+				age + b = {{addB()}}
+				<br>
+				now1:{{now}}
+				<br>
+				now2:{{now}}
+			</div>
+			
 			<script type="text/javascript" src="../javascript/vue2.js"></script>
 	</body>
 </html>

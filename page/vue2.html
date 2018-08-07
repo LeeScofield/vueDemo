@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Vue</title>
+		
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		
+	</head>
+	<body>
+			<div id="vue-el">
+				<label for="姓名">姓名</label>
+				<input type="text" ref="name" v-on:keyup.enter="printName">
+				{{name}}
+				<label for="岁数">岁数</label>
+				<input type="text" v-model="age">
+				{{age}}
+			</div>
+			
+			<script type="text/javascript" src="../javascript/vue2.js"></script>
+	</body>
+</html>

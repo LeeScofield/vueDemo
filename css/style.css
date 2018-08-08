@@ -6,3 +6,24 @@
 	vertical-align: middle;
 	line-height: 200px;
 }
+
+div{
+	border: 1px solid #000;
+	margin-top: 5px;
+}
+
+span.defaultSpan{
+	height: 30px;
+	border: 1px solid #000;
+}
+span.redColor{
+	line-height: 30px;
+	background: red;
+	color: #fff;
+	text-align: center;
+}
+
+span.afterLenth:after{
+	content: "length";
+	background: green;
+}

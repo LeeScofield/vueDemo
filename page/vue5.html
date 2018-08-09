@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Vue</title>
+		
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		
+	</head>
+	<body>
+			
+			<div id="vue-el">
+				<h1>{{title}}</h1>
+				<div class="box">
+					<div v-bind:style="{width:process + '%'}"></div>
+				</div>
+				
+				<input type="button" v-on:click="opt('+')" value="+++">
+				<input type="button" v-on:click="opt('-')" value="---">
+				<input type="button" v-on:click="restart" v-show="process!=0" value="restart">
+			</div>
+			
+			
+			<h1>多个Vue实例</h1>
+			<div id="vue1">
+				<h2>{{title}}</h2>
+				<div>{{content}}</div>
+			</div>
+			
+			<div id="vue2">
+				<h2>{{title}}</h2>
+				<div>{{content}}</div>
+				<input type="button" @click="changeTitle1" value="更新vue1标题">
+			</div>
+			
+			<h1>组件compontent</h1>
+			<div id="vue-test">
+				<greeting></greeting>
+			</div>
+			
+			
+			<script type="text/javascript" src="../javascript/vue5.js"></script>
+	</body>
+</html>

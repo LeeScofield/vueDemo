@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Vue</title>
+		
+		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		
+	</head>
+	<body>
+			
+			<div id="vue-el">
+				<h1>语法</h1>
+				<div>
+					<h2>if</h2>
+					<button v-on:click="toggleA = !toggleA">打开关闭A</button>
+					<button v-on:click="toggleB = !toggleB">打开关闭B</button>
+					
+					<p v-if="toggleA">这是toggleA</p>
+					<p v-else-if="toggleB">这是toggleB</p>
+				</div>
+				<div>
+					<h2>show</h2>
+					<button v-on:click="showA = !showA">显示关闭A</button>
+					<button v-on:click="showB = !showB">显示关闭B</button>
+					
+					<p v-show="showA">这是showA</p>
+					<p v-show="showB">这是showB</p>
+				</div>
+				
+			</div>
+				<hr><br>
+			<div id="vue-el1">
+				<h2>for</h2>
+				<ul>
+					<li v-for="v in characters">{{v}}</li>
+				</ul>
+				<hr>
+				
+				<h2>for</h2>
+				<ul>
+					<li v-for="(v,i) of characters">{{v}} - 下标{{i}}</li>
+				</ul>
+				<hr>
+				
+				<h2>for div</h2>
+				<div v-for="v of dataSource">
+					<h3>{{v.name}} - {{v.age}}</h3>
+				</div>
+				
+				<h2>for div2</h2>
+				<template v-for="item in dataSource">
+					<h5>{{item.name}}-{{item.age}}</h5>
+				</template>
+				
+				<h2>for div3</h2>
+				<template v-for="(obj,index) in dataSource">
+					<h5>每次便利一个属性：{{index}}</h5>
+					<div v-for="(value,key) in obj">
+						{{key}} : {{value}}
+					</div>
+				</template>
+				
+			</div>
+			
+			
+			<script type="text/javascript" src="../javascript/vue4.js"></script>
+	</body>
+</html>
